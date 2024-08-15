@@ -1,8 +1,8 @@
 from pymilvus import Collection, db, connections
 
 conn = connections.connect(host="10.66.12.37", port=19530)
-db.using_database("text_image_db")
-coll_name = 'text_image_vector'
+db.using_database("text_video_db")
+coll_name = 'text_video_vector'
 
 collection = Collection(coll_name)
 
