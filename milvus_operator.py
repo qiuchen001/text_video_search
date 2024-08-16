@@ -43,6 +43,8 @@ class MilvusOperator:
                                     'video_id': hit.entity.get('video_id'),
                                     'at_seconds': hit.entity.get('at_seconds'),
                                     })
+            # Sort the entity_list by distance in ascending order
+            entity_list.sort(key=lambda x: x['distance'], reverse=False)
 
         return entity_list
 
